@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-gray-400 h-screen flex justify-evenly items-center font-serif text-lg">
+    <div className="bg-custom-background h-screen flex justify-evenly items-center font-serif text-lg">
       <Link className="w-1/6" href={"/allFilms"}>
         <button
           className="bg-white h-14 rounded-lg p-4 

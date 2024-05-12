@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +13,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Link href={"/"}>
+          <Image
+            className="absolute top-4 left-4 cursor-pointer hover:w-20	 "
+            alt="Logo star wars"
+            width={70}
+            height={70}
+            src={"/logostarwars.png"}
+          />
+        </Link>
+        {children}
+      </body>
     </html>
   );
 }
