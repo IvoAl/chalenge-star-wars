@@ -19,6 +19,5 @@ const getCharacter = async (name, url) => {
 export default async function PageDetailCharacter({ params }) {
   const { name } = params;
   const character = await getCharacter(name, url);
-
   return <DetailCharacter character={character} />;
 }

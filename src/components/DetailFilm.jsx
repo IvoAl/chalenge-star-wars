@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function DetailFilm({ film, infoCharacters }) {
   return (
-    <div>
+    <div className="bg-red-600">
       <h1>{film.title}</h1>
       <Image
         alt="Imagen generica"

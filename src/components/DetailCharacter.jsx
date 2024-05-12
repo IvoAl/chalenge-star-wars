@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 export default function DetailCharacter({ character }) {
-  console.log("detail character:", character);
   return (
     <div>
       <h1>Detail Character</h1>

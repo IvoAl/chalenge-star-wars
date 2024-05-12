@@ -23,7 +23,7 @@ export default async function PageDetailFilm({ params }) {
   const infoCharacters = await getInfoCharacters(film.characters);
 
   return (
-    <div>
+    <div className="">
       <DetailFilm film={film} />
       <h1>Characters:</h1>
       {infoCharacters.map((char) => {

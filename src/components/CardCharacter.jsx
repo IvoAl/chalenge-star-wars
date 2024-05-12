@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function CardCharacter({ character }) {
   return (
-    <div>
-      <Link href={`/detailCharacter/${character.name}`}>
+    <div className="">
+      <Link className="" href={`/detailCharacter/${character.name}`}>
         <h1>{character.name}</h1>
         <Image
           alt="Imagen generica"
@@ -12,6 +12,8 @@ export default function CardCharacter({ character }) {
           height={40}
           src={"/starwars.jpg"}
         />
+        <h1>{character.eye_color}</h1>
+        <h1>{character.gender}</h1>
       </Link>
     </div>
   );

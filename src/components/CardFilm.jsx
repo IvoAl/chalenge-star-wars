@@ -1,19 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-
 export default function CardFilm({ title, episode_id }) {
   return (
-    <Link href={`/detailFilm/${episode_id}`}>
-      <div>
-        <h4>{title}</h4>
+    <div className="">
+      <Link
+        className="flex flex-col items-center justify-around h-72 w-64 m-8 rounded-xl shadow-lg shadow-blue-500/50 hover:shadow-lg hover:shadow-fuchsia-950"
+        href={`/detailFilm/${episode_id}`}
+      >
+        <h4 className="text-lg">{title}</h4>
         <Image
+          className="w-3/4 h-3/5 rounded-xl"
           alt="Imagen generica"
-          width={40}
-          height={40}
+          width={90}
+          height={70}
           src={"/starwars.jpg"}
         />
-        <p>{episode_id}</p>
-      </div>
-    </Link>
+        <p>Capitulo N°: {episode_id}</p>
+      </Link>
+    </div>
   );
 }
