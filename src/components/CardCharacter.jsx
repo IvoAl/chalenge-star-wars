@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function CardCharacter({ character }) {
   return (
-    <div className="bg-gray-300 shadow-black rounded-xl shadow-lg w-40 h-80 m-2.5 ">
+    <div className="bg-slate-200 shadow-black rounded-xl shadow-lg w-40 h-80 m-2.5 ">
       <Link
         className="flex flex-col items-center justify-around h-full"
         href={`/detailCharacter/${character.name}`}

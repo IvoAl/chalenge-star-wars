@@ -1,3 +1,4 @@
+import AllCharacters from "@/components/AllCharacters";
 import CardCharacter from "@/components/CardCharacter";
 import axios from "axios";
 
@@ -12,22 +13,8 @@ const getAllCharacters = async (url, allCharacters = []) => {
     return allCharacters;
   }
 };
-export default async function AllCharacters() {
+export default async function PageAllCharacters() {
   const url = "https://swapi.dev/api/people";
   const allCharacters = await getAllCharacters(url);
-  return (
-    <div className=" font-mono flex flex-col items-center">
-      <h1 className="text-3xl my-5">Todos los personajes</h1>
-      <div className="flex flex-wrap w-3/4">
-        {allCharacters &&
-          allCharacters.map((char) => {
-            return (
-              <div className="m-5">
-                <CardCharacter key={char.name} character={char} />
-              </div>
-            );
-          })}
-      </div>
-    </div>
-  );
+  return <AllCharacters info={allCharacters} />;
 }
