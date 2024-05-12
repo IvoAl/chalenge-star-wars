@@ -23,12 +23,16 @@ export default async function PageDetailFilm({ params }) {
   const infoCharacters = await getInfoCharacters(film.characters);
 
   return (
-    <div className="">
+    <div className="flex justify-center font-serif">
       <DetailFilm film={film} />
-      <h1>Characters:</h1>
-      {infoCharacters.map((char) => {
-        return <CardCharacter key={char} character={char} />;
-      })}
+      <div className=" w-1/2 flex flex-col justify-center items-center h-screen ">
+        <h1 className="my-10 text-lg">Personajes de la pelicula</h1>
+        <div className="w-full flex flex-wrap overflow-y-auto">
+          {infoCharacters.map((char) => {
+            return <CardCharacter key={char} character={char} />;
+          })}
+        </div>
+      </div>
     </div>
   );
 }
